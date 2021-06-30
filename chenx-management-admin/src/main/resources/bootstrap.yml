@@ -1,0 +1,16 @@
+# nacos 配置中心格式 ${prefix}-${spring.profiles.active}.${file-extension}
+# prefix: spring.application.name
+# spring.profiles.active 当默认为空时，- 也没有 = ${prefix}.${file-extension}
+# file-exetension: spring.cloud.nacos.config.file-extension
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        name: admin-service
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 9a8cb218-39da-4682-bb26-58feac961c8d

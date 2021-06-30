@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: admin-service
+  datasource:
+    # 数据库信息配置
+    url: jdbc:mysql://localhost:3306/db-admin?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: cxwCXW123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # druid 配置
+    druid:
+      max-active: 20
+    #    schema: classpath:database/schema.sql
+    #    data: classpath:database/data.sql
+    # 是否每次都执行以上脚本
+    # always
+    # embedded 只初始化内存数据库（默认值）,如h2等
+    # never 不执行
+  #    initialization-mode: always
+
+# mybatis 配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+chenx:
+  swagger:
+    enabled: false
+    path: com.chenx.admin.controller
+  response:
+    enabled: false
